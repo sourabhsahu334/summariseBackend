@@ -64,6 +64,12 @@ def get_hello():
     print(data,input_text)
     return jsonify(data)
 
+@app.route('/')
+def get_hello():
+    input_text = request.json.get('text');
+    print(data,input_text)
+    return jsonify(data)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
